@@ -3,22 +3,18 @@ on:
   push: 
     branches: ["main"]
 jobs:
-  run:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: echo
-      run: |
-        echo "${{ github.workspace	 }}"
-        echo "password ${{ secrets.password1  }}"
-    - name: docker run
-      uses: appleboy/ssh-action@v1.0.0
-      env: 
-        RUN_ID: ${{ github.run_id }}
-      with: 
-        host: 121.41.72.174
-        username: root
-        password: Abc123456
-        envs: RUN_ID
-        script: |
-          echo "run_id: ${{ github.run_id }}"
-          echo "work_path: ${{ github.action_path }}"
+    - name: maven build
+      run: echo "maven build.."
+    - name: docker build
+      run: echo "docker build..."
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: deploy
+      run: echo "deploy..."
+  
+  
+  
