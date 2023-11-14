@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: echo
-      run: echo "$GITHUB_ACTION_PATH"
+      run: echo "$GITHUB_JOB"
     - name: docker run
       uses: appleboy/ssh-action@v1.0.0
       env: 
