@@ -15,4 +15,4 @@ jobs:
         username: root
         password: Abc123456
         script: |
-          echo "$run_id"
+          echo "run_id: $run_id"
