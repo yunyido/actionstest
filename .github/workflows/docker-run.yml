@@ -9,11 +9,11 @@ jobs:
     - name: docker run
       uses: appleboy/ssh-action@v1.0.0
       env: 
-        run_id: "hello world"
+        RUN_ID: "hello world"
       with: 
         host: 121.41.72.174
         username: root
         password: Abc123456
-        envs: run_id
+        envs: RUN_ID
         script: |
-          echo "run_id: $run_id"
+          echo "run_id: $RUN_ID"
