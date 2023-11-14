@@ -17,3 +17,4 @@ jobs:
         envs: RUN_ID
         script: |
           echo "run_id: ${{ github.run_id }}"
+          echo "work_path: ${{ github.action_path }}"
