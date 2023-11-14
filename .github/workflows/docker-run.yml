@@ -9,7 +9,7 @@ jobs:
     - name: docker run
       uses: appleboy/ssh-action@v1.0.0
       env: 
-        RUN_ID: "$GITHUB_RUN_ID"
+        RUN_ID: ${{ GITHUB_RUN_ID }}
       with: 
         host: 121.41.72.174
         username: root
