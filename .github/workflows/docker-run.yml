@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: echo
-      run: echo "${{ github.run_id }}"
+      run: echo "${{ github.workspace	 }}"
     - name: docker run
       uses: appleboy/ssh-action@v1.0.0
       env: 
