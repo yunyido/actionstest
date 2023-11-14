@@ -1,0 +1,18 @@
+name: Docker run
+on: 
+  push: 
+    branches: ["main"]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - name: docker run
+      uses: appleboy/ssh-action@v1.0.0
+      env: 
+        run_id: "$GITHUB_RUN_ID"
+      with: 
+        host: 121.41.72.174
+        username: root
+        password: Abc123456
+        script: |
+          echo "$run_id"
